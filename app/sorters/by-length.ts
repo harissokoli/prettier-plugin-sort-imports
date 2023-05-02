@@ -5,8 +5,8 @@ export function sortBlockByLength(declarations: ImportBlock): ImportBlock {
 		const aLength = a.import.getText().length;
 		const bLength = b.import.getText().length;
 		if (aLength === bLength && a.importPath && b.importPath) {
-			return b.importPath.length - a.importPath.length;
+			return a.importPath.length - b.importPath.length;
 		}
-		return bLength - aLength;
+		return aLength - bLength;
 	});
 }
